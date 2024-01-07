@@ -13,7 +13,6 @@ export const Filters = () => {
     gender: "",
     date: !customDate ? "" : { startDate: "", endDate: "" },
   });
-  console.log(filters)
   const { dispatcher } = useData();
   const today = new Date();
   const yesterday = new Date(today);
