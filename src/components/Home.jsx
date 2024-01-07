@@ -9,17 +9,35 @@ export const Home = () => {
 
   return (
     <>
-      {(age || date || gender) && (
+      {(age || date || gender || date) && (
         <div>
           <h3>Filters Applied</h3>
-          <p>
-            <b>Age: </b>
-            {age !== 0 && <p>{age}</p>}
-          </p>
-          <p>
-            <b>Gender: </b>
-            {gender && <p>{gender}</p>}
-          </p>
+          <div className="filters-applied">
+            <span>
+              {age !== 0 && (
+                <p>
+                  <b>Age: </b>
+                  {age}
+                </p>
+              )}
+            </span>
+            <span>
+              {gender && (
+                <p>
+                  <b>Gender: </b>
+                  {gender}
+                </p>
+              )}
+            </span>
+            <span>
+              {date && (
+                <p>
+                  <b>Date: </b>
+                  {date}
+                </p>
+              )}
+            </span>
+          </div>
         </div>
       )}
 

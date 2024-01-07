@@ -1,5 +1,4 @@
 export const dataReducer = (state, action) => {
-  console.log("payload: ",JSON.stringify(action.payload));
   switch (action.type) {
     case "GET_DATA":
       return {

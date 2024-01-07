@@ -7,12 +7,13 @@ import { useCookies } from "react-cookie";
 
 export const Filters = () => {
   const [customDate, setCustomDate] = useState(false);
-  const [cookies, setCookie] = useCookies(['user']);
+  const [cookies, setCookie] = useCookies(["user"]);
   const [filters, setFilters] = useState({
     age: 0,
     gender: "",
     date: !customDate ? "" : { startDate: "", endDate: "" },
   });
+  console.log(filters)
   const { dispatcher } = useData();
   const today = new Date();
   const yesterday = new Date(today);
@@ -39,9 +40,9 @@ export const Filters = () => {
         <input
           type="text"
           value={
-            customDate && (filters.date.startDate) &&(filters.date.endDate)
+            customDate && filters.date.startDate && filters.date.endDate
               ? filters.date.startDate + "to" + filters.date.endDate
-              : ""
+              : filters.date
           }
         />
         <div className="date">
@@ -116,7 +117,7 @@ export const Filters = () => {
       <button
         onClick={() => {
           dispatcher({ type: "APPLY_FILTERS", payload: filters });
-          setCookie('name', filters);
+          setCookie("name", filters);
         }}
       >
         Apply

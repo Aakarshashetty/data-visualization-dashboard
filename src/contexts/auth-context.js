@@ -4,7 +4,6 @@ const AuthContext = createContext();
 export const AuthContextProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userData, setUserData] = useState(localStorage?.user);
-  console.log(userData)
   const getLoginData = async (userEmail, userPassword) => {
     try {
       const creds = {
