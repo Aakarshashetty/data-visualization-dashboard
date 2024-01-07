@@ -1,0 +1,11 @@
+.date{
+    border:1px solid;
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    margin: 10px auto;
+}
+.date span{
+    border-bottom: 1px solid;
+    cursor: pointer;
+}
