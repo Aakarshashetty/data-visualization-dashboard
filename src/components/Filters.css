@@ -1,11 +1,25 @@
 .date{
-    border:1px solid;
+    border:1px solid gray;
+    border-radius: 5px;
+   
     display: flex;
     flex-direction: column;
-    width: 550px;
+    width: 200px;
     margin: 10px auto;
 }
 .date span{
-    border-bottom: 1px solid;
+    border-bottom: 1px solid gray;
+    padding: 0.5rem 1rem;
     cursor: pointer;
+}
+.date span:hover{
+    background-color: gray;
+    
+}
+.filters{
+    margin: 20px;
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 500px;
 }
